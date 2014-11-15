@@ -40,7 +40,7 @@ Output:
 <div class='alert alert-success'><p>Well done! You successfully read this important alert message.</p></div>
 ```
 
-###Example 1 (with Markdown):
+###Example 2 (with Markdown):
 
 Code:
 ```md
