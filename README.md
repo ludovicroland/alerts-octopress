@@ -1,6 +1,6 @@
 #Alerts for Octopress 2
 
-Contributors: ludovic Roland ([http://www.rolandl.fr](http://www.rolandl.fr))<br/>
+Contributors: Ludovic Roland ([http://www.rolandl.fr](http://www.rolandl.fr))<br/>
 Stable tag: 0.1<br/>
 License: GNU GPL v2.0<br/>
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
