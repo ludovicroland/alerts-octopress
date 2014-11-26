@@ -40,8 +40,19 @@ module Jekyll
 
   class Alerts < Liquid::Block
 
+    TypeDismissible = /(success|info|warning|danger)\s(dismissible)/i
+
+    Type =  /(success|info|warning|danger)/
+
     def initialize(tag_name, markup, tokens)
-      @type = markup.strip
+      if markup =~ TypeDismissible
+        @type = $1.strip
+        @dismissible = true
+      elsif markup =~ Type
+        @type = $1.strip
+        @dismissible = false
+      end
+
       super
     end
 
@@ -56,7 +67,21 @@ module Jekyll
     end
 
     def html_output(content)
-      display = "<div class='alert alert-#{@type}'>"
+      display = "<div class=\"alert alert-#{@type}"
+
+      if @dismissible
+        display += " alert-dismissible"
+      end
+
+      display += "\" role=\"alert\">"
+
+      if @dismissible
+        display += "<button class=\"close\" data-dismiss=\"alert\" type=\"button\">"
+        display += "<span aria-hidden=\"true\"></span>"
+        display += "<span class=\"sr-only\">Close</span>"
+        display += "</button>"
+      end
+
       display += content
       display += "</div>"
       display
