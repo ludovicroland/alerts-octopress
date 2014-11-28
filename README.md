@@ -6,7 +6,7 @@ License: GNU GPL v2.0<br/>
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ##Description
-Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages. Base on the Bootstrap CSS Component. This plugin supports markdown !
+Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages. Based on the Bootstrap CSS Component. This plugin supports markdown !
 
 I did not try on Jekyll but it should works too.
 
