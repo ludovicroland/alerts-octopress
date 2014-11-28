@@ -4,7 +4,7 @@
 #
 # Author: Ludovic Roland http://www.rolandl.fr
 #
-# Description: Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages. Base on the Bootstrap CSS Component.
+# Description: Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages. Based on the Bootstrap CSS Component.
 #
 # Syntax:
 #
