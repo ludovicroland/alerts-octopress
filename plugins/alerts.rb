@@ -37,12 +37,12 @@
 # Example 3 (dismissible alert):
 #
 # {% alert info dismissible %}
-# Well done! You successfully read this important alert message. 
+# Heads up! This alert needs your attention, but it's not super important. 
 # {% endalert %}
 #
 # Output:
 #
-# <div class="alert alert-info alert-dismissible fade in" role="alert"><button class="close" data-dismiss="alert" type="button"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><p>Les éléments écrits entre crochets sont facultatifs.</p></div>
+# <div class="alert alert-info alert-dismissible fade in" role="alert"><button class="close" data-dismiss="alert" type="button"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><p>Heads up! This alert needs your attention, but it's not super important. </p></div>
 #
 # Note: this plugin supports markdown !
 
