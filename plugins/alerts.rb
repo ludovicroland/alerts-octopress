@@ -1,4 +1,6 @@
-# Title: Alerts for Jekyll
+# Title: Alerts for Octopress 2
+#
+# Version: 1.0
 #
 # Author: Ludovic Roland http://www.rolandl.fr
 #
@@ -6,7 +8,7 @@
 #
 # Syntax:
 #
-# {% alert success|info|warning|danger %}
+# {% alert success|info|warning|danger [dismissible] %}
 # alert content
 # {% endalert %}
 #
@@ -32,6 +34,16 @@
 #
 # <div class='alert alert-warning'><p><strong>Warning</strong><br /><br />Better check yourself, you're not looking too good.</p></div>
 #
+# Example 3 (dismissible alert):
+#
+# {% alert error dismissible %}
+# Well done! You successfully read this important alert message. 
+# {% endalert %}
+#
+# Output:
+#
+# <div class="alert alert-info alert-dismissible fade in" role="alert"><button class="close" data-dismiss="alert" type="button"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button><p>Les éléments écrits entre crochets sont facultatifs.</p></div>
+#
 # Note: this plugin supports markdown !
 
 require 'kramdown'
@@ -42,7 +54,7 @@ module Jekyll
 
     TypeDismissible = /(success|info|warning|danger)\s(dismissible)/i
 
-    Type =  /(success|info|warning|danger)/
+    Type =  /(success|info|warning|danger)/i
 
     def initialize(tag_name, markup, tokens)
       if markup =~ TypeDismissible
@@ -50,6 +62,9 @@ module Jekyll
         @dismissible = true
       elsif markup =~ Type
         @type = $1.strip
+        @dismissible = false
+      else
+        @type = "info"
         @dismissible = false
       end
 
@@ -70,14 +85,14 @@ module Jekyll
       display = "<div class=\"alert alert-#{@type}"
 
       if @dismissible
-        display += " alert-dismissible"
+        display += " alert-dismissible fade in"
       end
 
       display += "\" role=\"alert\">"
 
       if @dismissible
         display += "<button class=\"close\" data-dismiss=\"alert\" type=\"button\">"
-        display += "<span aria-hidden=\"true\"></span>"
+        display += "<span aria-hidden=\"true\">&times;</span>"
         display += "<span class=\"sr-only\">Close</span>"
         display += "</button>"
       end
