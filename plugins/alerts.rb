@@ -36,7 +36,7 @@
 #
 # Example 3 (dismissible alert):
 #
-# {% alert error dismissible %}
+# {% alert info dismissible %}
 # Well done! You successfully read this important alert message. 
 # {% endalert %}
 #
