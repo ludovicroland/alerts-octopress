@@ -17,6 +17,7 @@ Since Octopress is not maintained anymore, the plugin also works correctly on Je
 * Copy the content of the 'sass/plugins' directory into the 'sass/plugins' directory of your Octopress blog
 * Copy the content of the 'source/javascripts' directory into the 'source/javascripts' directory of your Octopress blog
 * Add the line `<script src="{{ root_url }}/javascripts/alerts.js" type="text/javascript"></script>` into the file 'source/_includes/head.html' file in order to load the javascript file on your blog
+* Add the line `<script src="{{ root_url }}/javascripts/transition.js" type="text/javascript"></script>` into the file 'source/_includes/head.html' file in order to load the javascript file on your blog
 
 ## Installation on Jekyll
 
@@ -26,7 +27,7 @@ Since Octopress is not maintained anymore, the plugin also works correctly on Je
 * Copy the content of the 'source/javascripts' directory into the 'js/plugins' directory of your Jekyll blog
 * Add the line `@import "_includes/_alerts"; into the file `css/style.scss`
 * Add the line `<script src="{{ '/js/plugins/alerts.js' | relative_url }}"></script>` into the file '_layouts/default.html' file in order to load the javascript file on your blog
-
+* Add the line `<script src="{{ '/js/plugins/transition.js' | relative_url }}"></script>` into the file '_layouts/default.html' file in order to load the javascript file on your blog
 
 ## Syntax
 
