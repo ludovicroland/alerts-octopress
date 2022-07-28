@@ -1,7 +1,7 @@
 # Alerts for Octopress 2 and Jekyll
 
 Contributors: Ludovic Roland ([http://www.rolandl.fr](http://www.rolandl.fr))<br/>
-Stable tag: 1.0<br/>
+Stable tag: 1.1.1<br/>
 License: GNU GPL v2.0<br/>
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -89,6 +89,10 @@ Output:
 ![Dismissible alerts](https://raw.github.com/ludovicroland/alerts-octopress/master/screenshot2.jpg)
 
 ## Changelog
+
+### 1.1.1
+
+* Add the transition.js file
 
 ### 1.1
 
