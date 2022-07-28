@@ -1,4 +1,4 @@
-# Alerts for Octopress 2
+# Alerts for Octopress 2 and Jekyll
 
 Contributors: Ludovic Roland ([http://www.rolandl.fr](http://www.rolandl.fr))<br/>
 Stable tag: 1.0<br/>
@@ -6,11 +6,11 @@ License: GNU GPL v2.0<br/>
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 ## Description
-Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages. Based on the Bootstrap CSS Component. This plugin supports markdown !
+Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages. Based on the Bootstrap CSS Component. This plugin supports markdown!
 
-I did not try on Jekyll but it should works too.
+Since Octopress is not maintained anymore, the plugin also works correctly on Jekyll (test on Jekyll 4.2.2).
 
-## Installation
+## Installation on Octopress 2
 
 * Download the plugin and uncompress it
 * Copy the content of the 'plugins' directory into the 'plugins' directory of your Octopress blog
@@ -18,10 +18,20 @@ I did not try on Jekyll but it should works too.
 * Copy the content of the 'source/javascripts' directory into the 'source/javascripts' directory of your Octopress blog
 * Add the line `<script src="{{ root_url }}/javascripts/alerts.js" type="text/javascript"></script>` into the file 'source/_includes/head.html' file in order to load the javascript file on your blog
 
+## Installation on Jekyll
+
+* Download the plugin and uncompress it
+* Copy the content of the 'plugins' directory into the '_plugins' directory of your Jekyll blog
+* Copy the content of the 'sass/plugins' directory into the '_sass/plugins' directory of your Jekyll blog
+* Copy the content of the 'source/javascripts' directory into the 'js/plugins' directory of your Jekyll blog
+* Add the line `@import "_includes/_alerts"; into the file `css/style.scss`
+* Add the line `<script src="{{ '/js/plugins/alerts.js' | relative_url }}"></script>` into the file '_layouts/default.html' file in order to load the javascript file on your blog
+
+
 ## Syntax
 
 ```md
-{% alert success|info|warning|danger [dismissible] %}
+{% alert success|info|warning|danger|neutral [dismissible] %}
 alert content
 {% endalert %}
 ```
@@ -80,10 +90,14 @@ Output:
 
 ## Changelog
 
+### 1.1
+
+* Add neutral alert
+
 ### 1.0
 
 * Stability improvement
-* Added dismissible alerts
+* Add dismissible alerts
 
 ### 0.1
 

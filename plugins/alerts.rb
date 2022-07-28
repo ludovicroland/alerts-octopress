@@ -52,9 +52,9 @@ module Jekyll
 
   class Alerts < Liquid::Block
 
-    TypeDismissible = /(success|info|warning|danger)\s(dismissible)/i
+    TypeDismissible = /(success|info|warning|danger|neutral)\s(dismissible)/i
 
-    Type =  /(success|info|warning|danger)/i
+    Type =  /(success|info|warning|danger|neutral)/i
 
     def initialize(tag_name, markup, tokens)
       if markup =~ TypeDismissible

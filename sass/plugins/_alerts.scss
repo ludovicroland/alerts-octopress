@@ -6,6 +6,7 @@
 {
   padding: 15px;
   margin-bottom: 20px;
+  margin-top: 20px;
   border: 1px solid transparent;
   border-radius: 4px;
 }
@@ -72,6 +73,18 @@
 .alert-danger hr 
 {
 	border-top-color: #e4b9c0;
+}
+
+.alert-neutral 
+{
+  color: rgba(0,0,0,.92);
+  background-color: #f4f4f4;
+  border-color: #565656;
+}
+
+.alert-neutral hr 
+{
+	border-top-color:#565656;
 }
 
 .alert-dismissible 
